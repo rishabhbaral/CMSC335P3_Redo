@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photo Viewer</title>
+    <script src="code.js" defer></script>
+    <link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body>
+    <h1><u>Photo Viewer</u></h1>
+    <img id="PhotoView" src="InitialImage.jpg" alt="InitialImage">
+    <form>
+        <fieldset>
+          <legend>Status:</legend>
+          <label for="photoDisplayed">Photo Being Displayed:</label>
+          <input type="text" id="photoDisplayed" disabled>
+          <div id="messages">Photo Viewer System</div>
+        </fieldset>
+        <fieldset>
+            <legend>Loading Images (Local Folder)</legend>
+            <label for="Photosfolder">Photos' Folder:</label>
+            <input type="text" id="Photosfolder" value="umcp/">
+            <label for="commonname">Common Name:</label>
+            <input type="text" id="commonname" value="college">
+            <br>
+            <label for="startnumber">Start Photo Number:</label>
+            <input type="number" id="startnumber" min="1" max="6" value="2">
+            <label for="endnumber">End Photo Number:</label>
+            <input type="number" id="endnumber" min="1" max="6" value="4">
+            <br>
+            <input type="button" id="PhotoLoad" value="Load Photos">
+        </fieldset>
+        <fieldset>
+            <legend>Loading Images (JSON file)</legend>
+            <label for="JSONURL">URL:</label>
+            <input type="text" value="http://cs.umd.edu/~nelson/classes/resources/cmsc335/images/imagesSet1.json" id="JSONURL">
+            <input type="button" id="JSONLoad" value="Load JSON">
+        </fieldset>
+        <fieldset>
+            <legend>Iterating</legend>
+            <input type="button" id="RewindToStart" value="First Photo">
+            <input type="button" id="prevPhoto" value="Previous Photo">
+            <input type="button" id="nextPhoto" value="Next Photo">
+            <input type="button" id="FastForwardToEnd" value="Last Photo">
+        </fieldset>
+        <fieldset>
+            <legend>Slideshows</legend>
+            <input type="button" id="StandardSlideshow" value="Slideshow">
+            <input type="button" id="RandomSlideshow" value="Random Slideshow">
+            <input type="button" id="EndShow" value="Stop Slideshow">
+        </fieldset>
+        <input type="reset" value="Reset Form Values" id="reset">
+    </form>
+</body>
+</html>
